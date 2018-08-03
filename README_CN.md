@@ -1,20 +1,20 @@
-English | [中文](README_CN.md)
+中文 | [English](README.md)
 
 # vue-tree-chart
 
 [![npm](https://img.shields.io/npm/v/vue-tree-chart.svg)](https://www.npmjs.com/package/vue-tree-chart/)  [![license](https://img.shields.io/github/license/tower1229/Vue-Tree-Chart.svg)]()
 
-> :deciduous_tree: A vue2 component to display tree chart
+> :deciduous_tree: Vue2树形图组件
 
 ![logo](https://refined-x.com/asset/vue-tree-chart.png)
 
-## Install
+## 安装
 
 ```
 npm i vue-tree-chart --save
 ```
 
-## Usage
+## 使用
 
 in template: 
 
@@ -41,21 +41,21 @@ export default {
 	...
 ```
 
-## Prop
+## 属性
 
 ### json
 
-Component data to support those field：
+组件数据，支持字段：
 
 ```
-- name[String] to display a node name
-- image_url[String] to display a node image
-- children[Array] node`s children
-- mate[Object] node`s mate
+- name[String] 节点名称
+- image_url[String] 节点图片
+- children[Array] 节点后代
+- mate[Object] 节点配偶
 
 ```
 
-Example：
+示例：
 
 ```
   {
@@ -96,19 +96,19 @@ Example：
   }
 ```
 
-## Event
+## 事件
 
 ### click-node
 
-Click on the node triggered, receive the current node data as a parameter
+点击节点触发，接收当前节点数据为参数
 
-## Run a demo
+## 演示
 
 ```
 npm run serve
 ```
 
-## Build
+## 构建
 
 ``` bash
 npm run build-bundle
