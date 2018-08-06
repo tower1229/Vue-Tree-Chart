@@ -6,7 +6,7 @@
 
 > :deciduous_tree: Vue2树形图组件
 
-![logo](https://refined-x.com/asset/vue-tree-chart.png)
+![logo](https://refined-x.com/asset/vtc-logo.png)
 
 ## 安装
 

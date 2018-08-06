@@ -6,7 +6,7 @@ English | [中文](README_CN.md)
 
 > :deciduous_tree: A vue2 component to display tree chart
 
-![logo](https://refined-x.com/asset/vue-tree-chart.png)
+![logo](https://refined-x.com/asset/vtc-logo.png)
 
 ## Install
 
