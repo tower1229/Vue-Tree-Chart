@@ -44,10 +44,6 @@ export default {
                 image_url: "https://static.refined-x.com/avat2.jpg"
               }
             ]
-          },
-          {
-            name: 'children3',
-            image_url: "https://static.refined-x.com/avat.jpg"
           }
         ]
       }
@@ -55,6 +51,7 @@ export default {
   },
   methods: {
     clickNode: function(node){
+      // eslint-disable-next-line
       console.log(node)
     }
   }
