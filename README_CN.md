@@ -52,7 +52,7 @@ export default {
 - image_url[String] 节点图片
 - children[Array] 节点后代
 - mate[Object] 节点配偶
-
+- extend[Boolean] 展开/收起节点后代，默认展开
 ```
 
 示例：
