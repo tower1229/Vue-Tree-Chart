@@ -98,7 +98,7 @@ Example：
 
 ## Event
 
-### click-node
+### click-node(node)
 
 Click on the node triggered, receive the current node data as a parameter
 

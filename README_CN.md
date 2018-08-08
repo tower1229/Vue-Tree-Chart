@@ -98,7 +98,7 @@ export default {
 
 ## 事件
 
-### click-node
+### click-node(node)
 
 点击节点触发，接收当前节点数据为参数
 
