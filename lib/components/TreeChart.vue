@@ -80,6 +80,7 @@ transform: rotateZ(135deg);transform-origin: 50% 50% 0;transition: transform eas
 .childLevel:first-child:before, .childLevel:last-child:before{display: none;}
 .childLevel:first-child:after{left:50%;height:15px; border:2px solid;border-color:#ccc transparent transparent #ccc;border-radius: 6px 0 0 0;transform: translate3d(1px,0,0)}
 .childLevel:last-child:after{right:50%;height:15px; border:2px solid;border-color:#ccc #ccc transparent transparent;border-radius: 0 6px 0 0;transform: translate3d(-1px,0,0)}
+.childLevel:first-child.childLevel:last-child::after{left:auto;border-radius: 0;border-color:transparent #ccc transparent transparent;transform: translate3d(1px,0,0)}
 
 .node{position: relative; display: inline-block;width: 10em;box-sizing: border-box; text-align: center;}
 .node .person{position: relative; display: inline-block;z-index: 2;}

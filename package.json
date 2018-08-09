@@ -1,6 +1,6 @@
 {
   "name": "vue-tree-chart",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A vue2 component to display tree chart",
   "author": "refined-x [tower1229@foxmail.com]",
   "main": "./dist/TreeChart.common.js",
