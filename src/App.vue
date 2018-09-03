@@ -1,6 +1,11 @@
 <template>
   <div id="app">
     <TreeChart :json="data" @click-node="clickNode" />
+    <footer class="foot">
+        <p>© 2018 - 3018  Author
+            <a href="https://refined-x.com/" target="_blank">雅X共赏</a> 
+        </p>
+    </footer>
   </div>
 </template>
 
@@ -69,4 +74,17 @@ export default {
 }
 #app .avat{border-radius: 2em;border-width:2px;}
 #app .name{font-weight:700;}
+.foot {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #333;
+    padding: 24px;
+    overflow: hidden;
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+}
+.foot a{color:#fff;margin:0 .5em}
 </style>
