@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <TreeChart :json="data" @click-node="clickNode" />
+    <label>
+      切换为横向
+      <input type="checkbox" v-model="landscape" value="1">
+    </label>
+    <TreeChart :json="data" :class="{landscape: landscape.length}" @click-node="clickNode" />
     <footer class="foot">
         <p>© 2018 - 3018  Author
             <a href="https://refined-x.com/" target="_blank">雅X共赏</a> 
@@ -20,6 +24,7 @@ export default {
   },
   data() {
     return {
+      landscape: [],
       data: {
         name: 'root',
         image_url: "https://static.refined-x.com/avat.jpg",
