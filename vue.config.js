@@ -1,13 +1,7 @@
 module.exports = {
-  outputDir: 'dist',
+  outputDir: 'docs',
   baseUrl: process.env.NODE_ENV === 'production' ?
-    '/Vue-Tree-Chart/' :
-    '/',
-  configureWebpack: {
-    output: {
-      libraryExport: 'default'
-    }
-  },
+    '/Vue-Tree-Chart/' : '/',
   css: {
     extract: false
   }

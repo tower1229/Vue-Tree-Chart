@@ -6,7 +6,7 @@
     </label>
     <TreeChart :json="data" :class="{landscape: landscape.length}" @click-node="clickNode" />
     <footer class="foot">
-        <p>© 2018 - 3018  Author
+        <p>© 2018 - 3018 Author
             <a href="https://refined-x.com/" target="_blank">雅X共赏</a> 
         </p>
     </footer>
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import TreeChart from "../lib/components/TreeChart.vue";
+import TreeChart from "@/components/TreeChart";
 
 export default {
   name: 'app',
