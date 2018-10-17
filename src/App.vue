@@ -14,7 +14,6 @@
 </template>
 
 <script>
-//import TreeChart from "vue-tree-chart";
 import TreeChart from "../lib/components/TreeChart.vue";
 
 export default {
