@@ -90,7 +90,7 @@ transform: rotateZ(135deg);transform-origin: 50% 50% 0;transition: transform eas
 .node.hasMate::after{content: "";position: absolute;left:2em;right:2em;top:2em;border-top:2px solid #ccc;z-index: 1;}
 .node.hasMate .person:last-child{margin-left:1em;}
 
-.landscape{transform: rotate(-90deg); padding:0 4em;}
+.landscape{transform:translate(-100%,0) rotate(-90deg);transform-origin: 100% 0;}
 .landscape .node{text-align: left;height: 8em;width:8em;}
 .landscape .person{position: relative; transform: rotate(90deg);padding-left: 4.5em;height: 4em;top:4em;left: -1em;}
 .landscape .person .avat{position: absolute;left: 0;}
