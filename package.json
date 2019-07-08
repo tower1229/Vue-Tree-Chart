@@ -23,7 +23,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-bundle": "vue-cli-service build --target lib --name TreeChart ./src/components/TreeChart.vue",
+    "build-bundle": "vue-cli-service build --target lib --dest dist --name TreeChart ./src/components/TreeChart.vue",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
