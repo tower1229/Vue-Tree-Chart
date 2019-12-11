@@ -4,7 +4,7 @@
       Vertical
       <input type="checkbox" v-model="landscape" value="1" />
     </label>
-    <div class="main-content  d-flex   align-items-center">
+    <div class="main-content d-flex align-items-center">
       <BinaryTree :json="data" :class="{landscape: landscape.length}" @click-node="clickNode" />
     </div>
 
@@ -36,22 +36,36 @@ export default {
       data: {
         name: "root",
         image_url: "https://static.refined-x.com/static/avatar.jpg",
+        tooltip_toggle: "tooltip",
+        tooltip_placement: "top",
+        tooltip_title: "title",
         children: [
           {
             name: "children1",
-            image_url: "https://static.refined-x.com/static/avatar.jpg"
+            image_url: "https://static.refined-x.com/static/avatar.jpg",
+            tooltip_toggle: "tooltip",
+            tooltip_placement: "left",
+            tooltip_title: "title"
           },
           {
             name: "children2",
             image_url: "https://static.refined-x.com/static/avatar.jpg",
             mate: {
               name: "mate",
-              image_url: "https://static.refined-x.com/static/avatar.jpg"
+              image_url: "https://static.refined-x.com/static/avatar.jpg",
+              tooltip_toggle: "tooltip",
+              tooltip_placement: "top",
+              tooltip_title: "<em>Tooltip</em> <u>with</u> <b>HTML</b>",
+              tooltip_html: true
             },
             children: [
               {
                 name: "grandchild",
-                image_url: "https://static.refined-x.com/static/avatar.jpg"
+                image_url: "https://static.refined-x.com/static/avatar.jpg",
+                tooltip_toggle: "tooltip",
+                tooltip_placement: "bottom",
+                tooltip_title: "<em>Tooltip</em> <u>with</u> <b>HTML</b>",
+                tooltip_html: true
               },
               {
                 name: "grandchild2",
@@ -77,18 +91,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  #app {
-    background: #e8ebee;
-    min-height: 1000px;
+#app {
+  background: #e8ebee;
+  min-height: 1000px;
+}
+
+.main {
+  &-content {
+    flex: 1;
   }
 
-  .main {
-    &-content {
-      flex: 1;
-    }
-    
-    &-footer {
-      flex: 0.5;
-    }
+  &-footer {
+    flex: 0.5;
   }
+}
 </style>

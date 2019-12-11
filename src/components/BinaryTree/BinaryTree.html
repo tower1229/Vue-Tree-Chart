@@ -6,10 +6,11 @@
         :class="{parentLevel: treeData.children, extend: treeData.children && treeData.extend}"
       >
         <div 
-          :class="{node: true, hasMate: treeData.mate}" 
-          data-toggle="tooltip"
-          data-placement="top"
-          title="Tooltip on top"
+          :class="{node: true, hasMate: treeData.mate}"
+          :data-toggle="treeData.tooltip_toggle"
+          :data-placement="treeData.tooltip_placement"
+          :title="treeData.tooltip_title"
+          :data-html="treeData.tooltip_html"
         >
           <div class="person" @click="$emit('click-node', treeData)">
             <div class="avat">
