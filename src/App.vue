@@ -1,96 +1,94 @@
 <template>
-  <div id="app">
+  <div id="app" class="main d-flex flex-column justify-content-around align-items-center">
     <label>
-      切换为横向
-      <input type="checkbox" v-model="landscape" value="1">
+      Vertical
+      <input type="checkbox" v-model="landscape" value="1" />
     </label>
-    <TreeChart :json="data" :class="{landscape: landscape.length}" @click-node="clickNode" />
-    <footer class="foot">
-        <p>© 2018 - 3018 Author
-            <a href="https://refined-x.com/" target="_blank">雅X共赏</a> 
-            Github 
-            <a href="https://github.com/tower1229/Vue-Tree-Chart" target="_blank">Vue-Tree-Chart</a>
-        </p>
+    <div class="main-content  d-flex   align-items-center">
+      <BinaryTree :json="data" :class="{landscape: landscape.length}" @click-node="clickNode" />
+    </div>
+
+    <footer class="main-footer bg-dark col-12 d-flex justify-content-center align-items-center">
+      <p class="text-white">
+        © 2020 Author
+        Github
+        <a
+          href="https://github.com/mdiaz00147/Vue-Binary-Tree"
+          target="_blank"
+          class="text-warning"
+        >Vue-Binary-Tree</a>
+      </p>
     </footer>
   </div>
 </template>
 
 <script>
-import TreeChart from "@/components/TreeChart";
+import BinaryTree from "@/components/BinaryTree";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    TreeChart
+    BinaryTree
   },
   data() {
     return {
       landscape: [],
       data: {
-        name: 'root',
+        name: "root",
         image_url: "https://static.refined-x.com/static/avatar.jpg",
         children: [
           {
-            name: 'children1',
+            name: "children1",
             image_url: "https://static.refined-x.com/static/avatar.jpg"
           },
           {
-            name: 'children2',
+            name: "children2",
             image_url: "https://static.refined-x.com/static/avatar.jpg",
             mate: {
-              name: 'mate',
+              name: "mate",
               image_url: "https://static.refined-x.com/static/avatar.jpg"
             },
             children: [
               {
-                name: 'grandchild',
+                name: "grandchild",
                 image_url: "https://static.refined-x.com/static/avatar.jpg"
               },
               {
-                name: 'grandchild2',
+                name: "grandchild2",
                 image_url: "https://static.refined-x.com/static/avatar.jpg"
               },
               {
-                name: 'grandchild3',
+                name: "grandchild3",
                 image_url: "https://static.refined-x.com/static/avatar.jpg"
               }
             ]
           }
         ]
       }
-    }
+    };
   },
   methods: {
-    clickNode: function(node){
+    clickNode: function(node) {
       // eslint-disable-next-line
-      console.log(node)
+      console.log(node);
     }
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-#app .avat{border-radius: 2em;border-width:2px;}
-#app .name{font-weight:700;}
-.foot {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background: #333;
-    padding: 24px;
-    overflow: hidden;
-    color: #999;
-    font-size: 14px;
-    text-align: center;
-}
-.foot a{color:#fff;margin:0 .5em}
+<style lang="scss" scoped>
+  #app {
+    background: #e8ebee;
+    min-height: 1000px;
+  }
+
+  .main {
+    &-content {
+      flex: 1;
+    }
+    
+    &-footer {
+      flex: 0.5;
+    }
+  }
 </style>
