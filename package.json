@@ -1,8 +1,8 @@
 {
-  "name": "vue-tree-chart",
+  "name": "vue-binary-tree",
   "version": "1.2.6",
-  "description": "A vue2 component to display tree chart",
-  "author": "refined-x [tower1229@foxmail.com]",
+  "description": "A vue2 component to display binary trees",
+  "author": "mdiaz00147@gmail.com",
   "main": "./dist/TreeChart.common.js",
   "repository": {
     "type": "git",
@@ -14,8 +14,8 @@
   "keywords": [
     "vue",
     "tree",
-    "chart",
-    "tree chart"
+    "binary",
+    "binary tree"
   ],
   "license": "MIT",
   "homepage": "https://github.com/tower1229/Vue-Tree-Chart/blob/master/README.md",
@@ -33,7 +33,9 @@
     "@vue/cli-plugin-babel": "^3.9.2",
     "@vue/cli-plugin-eslint": "^3.9.2",
     "@vue/cli-service": "^3.9.2",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0"
   },
   "eslintConfig": {
     "root": true,
