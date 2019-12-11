@@ -3,10 +3,10 @@
   "version": "1.2.6",
   "description": "A vue2 component to display binary trees",
   "author": "mdiaz00147@gmail.com",
-  "main": "./dist/TreeChart.common.js",
+  "main": "./src/components/BinaryTree",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tower1229/Vue-Tree-Chart.git"
+    "url": "git+https://github.com/mdiaz00147/Vue-Binary-Tree.git"
   },
   "files": [
     "dist"
@@ -18,7 +18,7 @@
     "binary tree"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/tower1229/Vue-Tree-Chart/blob/master/README.md",
+  "homepage": "https://github.com/mdiaz00147/Vue-Binary-Tree/blob/master/README.md",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
