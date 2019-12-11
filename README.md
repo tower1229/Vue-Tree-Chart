@@ -1,8 +1,6 @@
 English
 
-# vue-tree-chart
-
-[![npm](https://img.shields.io/npm/v/vue-tree-chart.svg)](https://www.npmjs.com/package/vue-tree-chart/)  [![license](https://img.shields.io/github/license/tower1229/Vue-Tree-Chart.svg)]()
+# vue-binary-tree
 
 > :deciduous_tree: A vue2 component to display tree chart
 
@@ -11,7 +9,7 @@ English
 ## Install
 
 ```
-npm i vue-tree-chart --save
+npm i vue-binary-tree --save
 ```
 
 ## Usage
@@ -25,7 +23,7 @@ in template:
 in script:
 
 ```
-import TreeChart from "vue-tree-chart";
+import TreeChart from "vue-binary-tree";
 
 export default {
 	components: {
@@ -114,4 +112,3 @@ npm run serve
 npm run build-bundle
 ```
 
-Copyright (c) 2017-present, [前端路上](http://refined-x.com)
