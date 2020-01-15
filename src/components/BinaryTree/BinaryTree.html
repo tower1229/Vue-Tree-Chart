@@ -7,12 +7,13 @@
       >
         <div 
           :class="{node: true, hasMate: treeData.mate}"
-          :data-toggle="treeData.tooltip_toggle"
-          :data-placement="treeData.tooltip_placement"
-          :title="treeData.tooltip_title"
-          :data-html="treeData.tooltip_html"
+          v-tooltip="{ 
+            content: treeData.tooltip_content, 
+            html: treeData.tooltip_html, 
+            placement: treeData.tooltip_placement
+          }"
         >
-          <div class="person" @click="$emit('click-node', treeData)">
+          <div class="person " @click="$emit('click-node', treeData)">
             <div class="avat">
               <img :src="treeData.image_url" />
             </div>
