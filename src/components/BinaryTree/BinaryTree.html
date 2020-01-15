@@ -1,42 +1,31 @@
-<div>
-  <table v-if="treeData.name">
-    <tr>
-      <td
-        :colspan="treeData.children ? treeData.children.length * 2 : 1"
-        :class="{parentLevel: treeData.children, extend: treeData.children && treeData.extend}"
-      >
-        <div 
-          :class="{node: true, hasMate: treeData.mate}"
-          :data-toggle="treeData.tooltip_toggle"
-          :data-placement="treeData.tooltip_placement"
-          :title="treeData.tooltip_title"
-          :data-html="treeData.tooltip_html"
-        >
-          <div class="person" @click="$emit('click-node', treeData)">
-            <div class="avat">
-              <img :src="treeData.image_url" />
-            </div>
-            <div class="name">{{treeData.name}}</div>
+<table v-if="treeData.name">
+  <tr>
+    <td :colspan="treeData.children ? treeData.children.length * 2 : 1"
+      :class="{parentLevel: treeData.children, extend: treeData.children && treeData.extend}">
+      <div :class="{node: true, hasMate: treeData.mate}" v-tooltip="{ 
+            content: treeData.tooltip_content, 
+            html: treeData.tooltip_html, 
+            placement: treeData.tooltip_placement
+          }">
+        <div class="person " @click="$emit('click-node', treeData)">
+          <div class="avat">
+            <img :src="treeData.image_url" />
           </div>
-          <div class="person" v-if="treeData.mate" @click="$emit('click-node', treeData.mate)">
-            <div class="avat">
-              <img :src="treeData.mate.image_url" />
-            </div>
-            <div class="name">{{treeData.mate.name}}</div>
-          </div>
+          <div class="name">{{treeData.name}}</div>
         </div>
-        <div class="extend_handle" v-if="treeData.children" @click="toggleExtend(treeData)"></div>
-      </td>
-    </tr>
-    <tr v-if="treeData.children && treeData.extend">
-      <td
-        v-for="(children, index) in treeData.children"
-        :key="index"
-        colspan="2"
-        class="childLevel"
-      >
-        <BinaryTree :json="children" @click-node="$emit('click-node', $event)" />
-      </td>
-    </tr>
-  </table>
-</div>
+        <div class="person" v-if="treeData.mate" @click="$emit('click-node', treeData.mate)">
+          <div class="avat">
+            <img :src="treeData.mate.image_url" />
+          </div>
+          <div class="name">{{treeData.mate.name}}</div>
+        </div>
+      </div>
+      <div class="extend_handle" v-if="treeData.children" @click="toggleExtend(treeData)"></div>
+    </td>
+  </tr>
+  <tr v-if="treeData.children && treeData.extend">
+    <td v-for="(children, index) in treeData.children" :key="index" colspan="2" class="childLevel">
+      <BinaryTree :json="children" @click-node="$emit('click-node', $event)" />
+    </td>
+  </tr>
+</table>

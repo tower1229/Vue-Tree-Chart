@@ -36,16 +36,14 @@ export default {
       data: {
         name: "root",
         image_url: "https://static.refined-x.com/static/avatar.jpg",
-        tooltip_toggle: "tooltip",
         tooltip_placement: "top",
-        tooltip_title: "title",
+        tooltip_content: "title",
         children: [
           {
             name: "children1",
             image_url: "https://static.refined-x.com/static/avatar.jpg",
-            tooltip_toggle: "tooltip",
             tooltip_placement: "left",
-            tooltip_title: "title"
+            tooltip_content: "title"
           },
           {
             name: "children2",
@@ -53,18 +51,16 @@ export default {
             mate: {
               name: "mate",
               image_url: "https://static.refined-x.com/static/avatar.jpg",
-              tooltip_toggle: "tooltip",
               tooltip_placement: "top",
-              tooltip_title: "<em>Tooltip</em> <u>with</u> <b>HTML</b>",
+              tooltip_content: "<em>Tooltip</em> <u>with</u> <b>HTML</b>",
               tooltip_html: true
             },
             children: [
               {
                 name: "grandchild",
                 image_url: "https://static.refined-x.com/static/avatar.jpg",
-                tooltip_toggle: "tooltip",
                 tooltip_placement: "bottom",
-                tooltip_title: "<em>Tooltip</em> <u>with</u> <b>HTML</b>",
+                tooltip_content: "<em>Tooltip</em> <u>with</u> <b>HTML</b>",
                 tooltip_html: true
               },
               {

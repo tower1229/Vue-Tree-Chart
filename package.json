@@ -1,6 +1,6 @@
 {
   "name": "vue-binary-tree",
-  "version": "1.2.6",
+  "version": "1.0.7",
   "description": "A vue2 component to display binary trees",
   "author": "mdiaz00147@gmail.com",
   "main": "./src/components/BinaryTree",
@@ -9,6 +9,7 @@
     "url": "git+https://github.com/mdiaz00147/Vue-Binary-Tree.git"
   },
   "files": [
+    "src",
     "dist"
   ],
   "keywords": [
@@ -27,6 +28,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "v-tooltip": "^2.0.2",
     "vue": "^2.6.10"
   },
   "devDependencies": {
