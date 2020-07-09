@@ -1,7 +1,9 @@
 <template>
     <table v-if="treeData.name">
       <tr>
-        <td :colspan="treeData.children ? treeData.children.length * 2 : 1" :class="{parentLevel: treeData.children, extend: treeData.children && treeData.extend}">
+        <td :colspan="Array.isArray(treeData.children) ? treeData.children.length * 2 : 1" 
+          :class="{parentLevel: Array.isArray(treeData.children) && treeData.children.length, extend: Array.isArray(treeData.children) && treeData.children.length && treeData.extend}"
+        >
           <div :class="{node: true, hasMate: treeData.mate}">
             <div class="person" @click="$emit('click-node', treeData)">
               <div class="avat">
@@ -20,10 +22,10 @@
               </div>
             </template>
           </div>
-          <div class="extend_handle" v-if="treeData.children" @click="toggleExtend(treeData)"></div>
+          <div class="extend_handle" v-if="Array.isArray(treeData.children) && treeData.children.length" @click="toggleExtend(treeData)"></div>
         </td>
       </tr>
-      <tr v-if="treeData.children && treeData.extend">
+      <tr v-if="Array.isArray(treeData.children) && treeData.children.length && treeData.extend">
         <td v-for="(children, index) in treeData.children" :key="index" colspan="2" class="childLevel">
           <TreeChart :json="children" @click-node="$emit('click-node', $event)"/>
         </td>
