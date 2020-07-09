@@ -5,7 +5,10 @@
           :class="{parentLevel: Array.isArray(treeData.children) && treeData.children.length, extend: Array.isArray(treeData.children) && treeData.children.length && treeData.extend}"
         >
           <div :class="{node: true, hasMate: treeData.mate}">
-            <div class="person" @click="$emit('click-node', treeData)">
+            <div class="person" 
+              :class="Array.isArray(treeData.class) ? treeData.class : []"
+              @click="$emit('click-node', treeData)"
+            >
               <div class="avat">
                 <img :src="treeData.image_url" />
               </div>
@@ -13,6 +16,7 @@
             </div>
             <template v-if="Array.isArray(treeData.mate) && treeData.mate.length">
               <div class="person" v-for="(mate, mateIndex) in treeData.mate" :key="treeData.name+mateIndex"
+                :class="Array.isArray(mate.class) ? mate.class : []"
                 @click="$emit('click-node', mate)"
               >
                 <div class="avat">

@@ -52,6 +52,7 @@ Component data to support those field：
 - image_url[String] to display a node image
 - children[Array] node`s children
 - mate[Array] node`s mate
+- class[Array] node`s class
 - extend[Boolean] show/hide node`s children, default True
 ```
 
@@ -61,6 +62,7 @@ Example：
   {
     name: 'root',
     image_url: "https://static.refined-x.com/avat.jpg",
+    class: ["rootNode"],
     children: [
       {
         name: 'children1',

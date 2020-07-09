@@ -29,6 +29,7 @@ export default {
       data: {
         name: 'root',
         image_url: "https://static.refined-x.com/static/avatar.jpg",
+        class: ["rootNode"],
         children: [
           {
             name: 'children1',
@@ -82,6 +83,10 @@ export default {
 }
 #app .avat{border-radius: 2em;border-width:2px;}
 #app .name{font-weight:700;}
+#app .rootNode .name{
+  color: red;
+}
+
 .foot {
     position: fixed;
     left: 0;

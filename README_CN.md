@@ -52,6 +52,7 @@ export default {
 - image_url[String] 节点图片
 - children[Array] 节点后代
 - mate[Array] 节点配偶
+- class[Array] 节点自定义class，字符串数组
 - extend[Boolean] 展开/收起节点后代，默认展开
 ```
 
@@ -61,6 +62,7 @@ export default {
   {
     name: 'root',
     image_url: "https://static.refined-x.com/avat.jpg",
+    class: ["rootNode"],
     children: [
       {
         name: 'children1',
