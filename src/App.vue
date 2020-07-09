@@ -37,10 +37,12 @@ export default {
           {
             name: 'children2',
             image_url: "https://static.refined-x.com/static/avatar.jpg",
-            mate: {
-              name: 'mate',
-              image_url: "https://static.refined-x.com/static/avatar.jpg"
-            },
+            mate: [
+              {
+                name: 'mate',
+                image_url: "https://static.refined-x.com/static/avatar.jpg"
+              }
+            ],
             children: [
               {
                 name: 'grandchild',

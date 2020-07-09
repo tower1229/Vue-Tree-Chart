@@ -51,7 +51,7 @@ Component data to support those field：
 - name[String] to display a node name
 - image_url[String] to display a node image
 - children[Array] node`s children
-- mate[Object] node`s mate
+- mate[Array] node`s mate
 - extend[Boolean] show/hide node`s children, default True
 ```
 

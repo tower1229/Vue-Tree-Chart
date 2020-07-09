@@ -9,12 +9,16 @@
               </div>
               <div class="name">{{treeData.name}}</div>
             </div>
-            <div class="person" v-if="treeData.mate" @click="$emit('click-node', treeData.mate)">
-              <div class="avat">
-                <img :src="treeData.mate.image_url" />
+            <template v-if="Array.isArray(treeData.mate) && treeData.mate.length">
+              <div class="person" v-for="(mate, mateIndex) in treeData.mate" :key="treeData.name+mateIndex"
+                @click="$emit('click-node', mate)"
+              >
+                <div class="avat">
+                  <img :src="mate.image_url" />
+                </div>
+                <div class="name">{{mate.name}}</div>
               </div>
-              <div class="name">{{treeData.mate.name}}</div>
-            </div>
+            </template>
           </div>
           <div class="extend_handle" v-if="treeData.children" @click="toggleExtend(treeData)"></div>
         </td>
@@ -82,14 +86,13 @@ transform: rotateZ(135deg);transform-origin: 50% 50% 0;transition: transform eas
 .childLevel:last-child:after{right:50%;height:15px; border:2px solid;border-color:#ccc #ccc transparent transparent;border-radius: 0 6px 0 0;transform: translate3d(-1px,0,0)}
 .childLevel:first-child.childLevel:last-child::after{left:auto;border-radius: 0;border-color:transparent #ccc transparent transparent;transform: translate3d(1px,0,0)}
 
-.node{position: relative; display: inline-block;width: 13em;box-sizing: border-box; text-align: center;}
+.node{position: relative; display: inline-block;margin: 0 1em;box-sizing: border-box; text-align: center;}
 .node .person{position: relative; display: inline-block;z-index: 2;width:6em; overflow: hidden;}
 .node .person .avat{display: block;width:4em;height: 4em;margin:auto;overflow:hidden; background:#fff;border:1px solid #ccc;box-sizing: border-box;}
 .node .person .avat img{width:100%;height: 100%;}
 .node .person .name{height:2em;line-height: 2em;overflow: hidden;width:100%;}
 .node.hasMate::after{content: "";position: absolute;left:2em;right:2em;top:2em;border-top:2px solid #ccc;z-index: 1;}
-.node.hasMate .person:last-child{margin-left:1em;}
-
+/* 横板 */
 .landscape{transform:translate(-100%,0) rotate(-90deg);transform-origin: 100% 0;}
 .landscape .node{text-align: left;height: 8em;width:8em;}
 .landscape .person{position: relative; transform: rotate(90deg);padding-left: 4.5em;height: 4em;top:4em;left: -1em;}
