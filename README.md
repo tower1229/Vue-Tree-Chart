@@ -10,7 +10,7 @@ English | [中文](README_CN.md)
 
 ## Install
 
-```
+```bash
 npm i vue-tree-chart --save
 ```
 
@@ -18,13 +18,13 @@ npm i vue-tree-chart --save
 
 in template: 
 
-```
+```html
 <TreeChart :json="treeData" />
 ```
 
 in script:
 
-```
+```js
 import TreeChart from "vue-tree-chart";
 
 export default {
@@ -47,7 +47,7 @@ export default {
 
 Component data to support those field：
 
-```
+```text
 - name[String] to display a node name
 - image_url[String] to display a node image
 - children[Array] node`s children
@@ -58,7 +58,7 @@ Component data to support those field：
 
 Example：
 
-```
+```js
   {
     name: 'root',
     image_url: "https://static.refined-x.com/avat.jpg",
@@ -106,7 +106,7 @@ Click on the node triggered, receive the current node data as a parameter
 
 ## Run a demo
 
-```
+```bash
 npm run serve
 ```
 
