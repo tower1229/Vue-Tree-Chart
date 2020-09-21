@@ -10,7 +10,7 @@
 
 ## 安装
 
-```
+```bash
 npm i vue-tree-chart --save
 ```
 
@@ -18,13 +18,13 @@ npm i vue-tree-chart --save
 
 in template: 
 
-```
+```html
 <TreeChart :json="treeData" />
 ```
 
 in script:
 
-```
+```js
 import TreeChart from "vue-tree-chart";
 
 export default {
@@ -47,7 +47,7 @@ export default {
 
 组件数据，支持字段：
 
-```
+```text
 - name[String] 节点名称
 - image_url[String] 节点图片
 - children[Array] 节点后代
@@ -58,7 +58,7 @@ export default {
 
 示例：
 
-```
+```js
   {
     name: 'root',
     image_url: "https://static.refined-x.com/avat.jpg",
@@ -106,7 +106,7 @@ export default {
 
 ## 演示
 
-```
+```bash
 npm run serve
 ```
 
