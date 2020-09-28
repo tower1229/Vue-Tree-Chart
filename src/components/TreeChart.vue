@@ -44,12 +44,12 @@
                   <div class="name">{{scope.treeData.name}}</div>
                 </slot>
             </template>
-            <template v-slot:mate="scope">
-                <slot name="mate" v-bind:mate="scope.mate">
+            <template v-slot:mate="scopeMate">
+                <slot name="mate" v-bind:mate="scopeMate.mate">
                   <div class="avat">
-                    <img :src="scope.mate.image_url" />
+                    <img :src="scopeMate.mate.image_url" />
                   </div>
-                  <div class="name">{{scope.mate.name}}</div>
+                  <div class="name">{{scopeMate.mate.name}}</div>
                 </slot>
             </template>
           </TreeChart>
