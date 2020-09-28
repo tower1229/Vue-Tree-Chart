@@ -22,6 +22,18 @@ in template:
 <TreeChart :json="treeData" />
 ```
 
+or
+
+```html
+<TreeChart :json="treeData">
+  <template v-slot="scope">
+    <div class="customClass">
+      {{ scope.name }}
+    </div>
+  </template>
+</TreeChart>
+```
+
 in script:
 
 ```js

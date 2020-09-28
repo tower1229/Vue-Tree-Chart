@@ -5,24 +5,28 @@
           :class="{parentLevel: Array.isArray(treeData.children) && treeData.children.length, extend: Array.isArray(treeData.children) && treeData.children.length && treeData.extend}"
         >
           <div :class="{node: true, hasMate: treeData.mate}">
-            <div class="person" 
+            <div class="person"
               :class="Array.isArray(treeData.class) ? treeData.class : []"
               @click="$emit('click-node', treeData)"
             >
-              <div class="avat">
-                <img :src="treeData.image_url" />
-              </div>
-              <div class="name">{{treeData.name}}</div>
+                <slot v-bind:treeData="treeData">
+                  <div class="avat">
+                    <img :src="treeData.image_url" />
+                  </div>
+                  <div class="name">{{treeData.name}}</div>
+                </slot>
             </div>
             <template v-if="Array.isArray(treeData.mate) && treeData.mate.length">
               <div class="person" v-for="(mate, mateIndex) in treeData.mate" :key="treeData.name+mateIndex"
                 :class="Array.isArray(mate.class) ? mate.class : []"
                 @click="$emit('click-node', mate)"
               >
-                <div class="avat">
-                  <img :src="mate.image_url" />
-                </div>
-                <div class="name">{{mate.name}}</div>
+                  <slot name="mate" v-bind:mate="mate">
+                    <div class="avat">
+                      <img :src="mate.image_url" />
+                    </div>
+                    <div class="name">{{mate.name}}</div>
+                  </slot>
               </div>
             </template>
           </div>
@@ -31,7 +35,24 @@
       </tr>
       <tr v-if="Array.isArray(treeData.children) && treeData.children.length && treeData.extend">
         <td v-for="(children, index) in treeData.children" :key="index" colspan="2" class="childLevel">
-          <TreeChart :json="children" @click-node="$emit('click-node', $event)"/>
+          <TreeChart :json="children" @click-node="$emit('click-node', $event)">
+            <template v-slot:default="scope">
+                <slot v-bind:treeData="scope.treeData">
+                  <div class="avat">
+                    <img :src="scope.treeData.image_url" />
+                  </div>
+                  <div class="name">{{scope.treeData.name}}</div>
+                </slot>
+            </template>
+            <template v-slot:mate="scope">
+                <slot name="mate" v-bind:mate="scope.mate">
+                  <div class="avat">
+                    <img :src="scope.mate.image_url" />
+                  </div>
+                  <div class="name">{{scope.mate.name}}</div>
+                </slot>
+            </template>
+          </TreeChart>
         </td>
       </tr>
     </table>
