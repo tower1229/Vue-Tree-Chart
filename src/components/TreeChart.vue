@@ -17,15 +17,15 @@
                 </slot>
             </div>
             <template v-if="Array.isArray(treeData.mate) && treeData.mate.length">
-              <div class="person" v-for="(mate, mateIndex) in treeData.mate" :key="treeData.name+mateIndex"
-                :class="Array.isArray(mate.class) ? mate.class : []"
-                @click="$emit('click-node', mate)"
+              <div class="person" v-for="(singleMate, mateIndex) in treeData.mate" :key="treeData.name+mateIndex"
+                :class="Array.isArray(singleMate.class) ? singleMate.class : []"
+                @click="$emit('click-node', singleMate)"
               >
-                  <slot name="mate" v-bind:mate="mate">
+                  <slot name="mate" v-bind:mate="singleMate">
                     <div class="avat">
-                      <img :src="mate.image_url" />
+                      <img :src="singleMate.image_url" />
                     </div>
-                    <div class="name">{{mate.name}}</div>
+                    <div class="name">{{singleMate.name}}</div>
                   </slot>
               </div>
             </template>
@@ -44,12 +44,12 @@
                   <div class="name">{{scope.treeData.name}}</div>
                 </slot>
             </template>
-            <template v-slot:mate="scopeMate">
-                <slot name="mate" v-bind:mate="scopeMate.mate">
+            <template v-slot:mate="scope">
+                <slot name="mate" v-bind:mate="scope.mate">
                   <div class="avat">
-                    <img :src="scopeMate.mate.image_url" />
+                    <img :src="scope.mate.image_url" />
                   </div>
-                  <div class="name">{{scopeMate.mate.name}}</div>
+                  <div class="name">{{scope.mate.name}}</div>
                 </slot>
             </template>
           </TreeChart>
