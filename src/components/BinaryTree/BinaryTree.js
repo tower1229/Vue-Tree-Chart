@@ -1,5 +1,5 @@
-import VTooltip from 'v-tooltip';
-import Vue from 'vue';
+import VTooltip from "v-tooltip";
+import Vue from "vue";
 
 Vue.use(VTooltip);
 
@@ -8,7 +8,7 @@ export default {
   props: ["json"],
   data() {
     return {
-      treeData: {}
+      treeData: {},
     };
   },
   watch: {
@@ -18,7 +18,7 @@ export default {
           jsonData.extend =
             jsonData.extend === void 0 ? true : !!jsonData.extend;
           if (Array.isArray(jsonData.children)) {
-            jsonData.children.forEach(c => {
+            jsonData.children.forEach((c) => {
               extendKey(c);
             });
           }
@@ -28,13 +28,13 @@ export default {
           this.treeData = extendKey(Props);
         }
       },
-      immediate: true
-    }
+      immediate: true,
+    },
   },
   methods: {
     toggleExtend: function(treeData) {
       treeData.extend = !treeData.extend;
       this.$forceUpdate();
-    }
-  }
+    },
+  },
 };
