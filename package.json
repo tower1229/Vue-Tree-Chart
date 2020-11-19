@@ -1,6 +1,6 @@
 {
   "name": "vue-binary-tree",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A vue2 component to display binary trees",
   "author": "mario@blackboxcode.io",
   "main": "./src/components/BinaryTree",
