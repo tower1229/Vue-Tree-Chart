@@ -43,13 +43,13 @@ export default {
     return {
       landscape: [],
       data: {
-        name: "root",
+        name: "  <h5>TEST</h5>",
         image_url: "https://static.refined-x.com/static/avatar.jpg",
         tooltip_placement: "top",
         tooltip_content: "title",
         children: [
           {
-            name: "children1",
+            name: "<h5>TEST22</h5>",
             image_url: "https://static.refined-x.com/static/avatar.jpg",
             tooltip_placement: "left",
             tooltip_content: "title",
