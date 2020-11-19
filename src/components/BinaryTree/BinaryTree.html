@@ -13,10 +13,18 @@
           }"
       >
         <div class="person " @click="$emit('click-node', treeData)">
+          ueheei
           <div class="avat">
             <img :src="treeData.image_url" />
           </div>
-          <div class="name" v-html="treeData.name"></div>
+          <template v-if="treeData.name_html">
+            <div class="name" v-html="treeData.name"></div>
+          </template>
+          <template v-else>
+            <div class="name">
+              {{treeData.name}}
+            </div>
+          </template>
         </div>
         <div
           class="person"
@@ -26,7 +34,14 @@
           <div class="avat">
             <img :src="treeData.mate.image_url" />
           </div>
-          <div class="name" v-html="treeData.mate.name"></div>
+          <template v-if="treeData.mate.name_html">
+            <div class="name" v-html="treeData.mate.name_html"></div>
+          </template>
+          <template v-else>
+            <div class="name">
+              {{treeData.mate.name}}
+            </div>
+          </template>
         </div>
       </div>
       <div
