@@ -2,11 +2,13 @@
 
 # vue-tree-chart
 
-[![npm](https://img.shields.io/npm/v/vue-tree-chart.svg)](https://www.npmjs.com/package/vue-tree-chart/)  [![license](https://img.shields.io/github/license/tower1229/Vue-Tree-Chart.svg)]()
+[![npm](https://img.shields.io/npm/v/vue-tree-chart.svg)](https://www.npmjs.com/package/vue-tree-chart/) [![license](https://img.shields.io/github/license/tower1229/Vue-Tree-Chart.svg)]()
 
-> :deciduous_tree: Vue2树形图组件
+> :deciduous_tree: Vue2 树形图组件
 
 ![logo](https://refined-x.com/asset/vtc-logo.png)
+
+Vue3.x 版本[在这](https://github.com/tower1229/Vue-Tree-Chart/tree/vue3)
 
 ## 安装
 
@@ -16,7 +18,7 @@ npm i vue-tree-chart --save
 
 ## 使用
 
-in template: 
+in template:
 
 ```html
 <TreeChart :json="treeData" />
@@ -112,7 +114,7 @@ npm run serve
 
 ## 构建
 
-``` bash
+```bash
 npm run build-bundle
 ```
 
