@@ -27,7 +27,7 @@ in template:
 in script:
 
 ```js
-import TreeChart from "vue-tree-chart";
+import TreeChart from "vue-tree-chart-3";
 
 export default {
 	components: {
