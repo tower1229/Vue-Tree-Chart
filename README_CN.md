@@ -4,7 +4,7 @@
 
 [![npm](https://img.shields.io/npm/v/vue-tree-chart.svg)](https://www.npmjs.com/package/vue-tree-chart/) [![license](https://img.shields.io/github/license/tower1229/Vue-Tree-Chart.svg)]()
 
-> :deciduous_tree: Vue2 树形图组件
+> :deciduous_tree: Vue 树形图组件
 
 ![logo](https://refined-x.com/asset/vtc-logo.png)
 
