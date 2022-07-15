@@ -8,6 +8,8 @@ English | [中文](README_CN.md)
 
 ![logo](https://refined-x.com/asset/vtc-logo.png)
 
+Vue2.x version [is here](https://github.com/tower1229/Vue-Tree-Chart)
+
 ## Install
 
 ```bash

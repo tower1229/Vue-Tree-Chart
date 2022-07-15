@@ -8,6 +8,8 @@
 
 ![logo](https://refined-x.com/asset/vtc-logo.png)
 
+Vue2.x 版本[在这](https://github.com/tower1229/Vue-Tree-Chart)
+
 ## 安装
 
 ```bash
