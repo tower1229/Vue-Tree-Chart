@@ -1,9 +1,9 @@
 {
-  "name": "vue-tree-chart",
+  "name": "vue-tree-chart-3",
   "version": "1.2.9",
   "description": "A vue2 component to display tree chart",
   "author": "refined-x [tower1229@foxmail.com]",
-  "main": "./dist/TreeChart.common.js",
+  "main": "./dist/TreeChart3.common.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tower1229/Vue-Tree-Chart.git"
@@ -23,19 +23,13 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-bundle": "vue-cli-service build --target lib --dest dist --name TreeChart ./src/components/TreeChart.vue",
+    "build-bundle": "vue-cli-service build --target lib --dest dist --name TreeChart3 ./src/components/TreeChart.vue",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "vue": "^2.6.12"
+    "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.6",
-    "@vue/cli-plugin-eslint": "^4.5.6",
-    "@vue/cli-service": "^4.5.6",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.9.0",
-    "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.12"
+    "@vue/cli-service": "^5.0.8"
   }
 }

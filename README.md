@@ -1,22 +1,22 @@
 English | [中文](README_CN.md)
 
-# vue-tree-chart
+# vue-tree-chart-3
 
-[![npm](https://img.shields.io/npm/v/vue-tree-chart.svg)](https://www.npmjs.com/package/vue-tree-chart/)  [![license](https://img.shields.io/github/license/tower1229/Vue-Tree-Chart.svg)]()
+[![npm](https://img.shields.io/npm/v/vue-tree-chart.svg)](https://www.npmjs.com/package/vue-tree-chart/) [![license](https://img.shields.io/github/license/tower1229/Vue-Tree-Chart.svg)]()
 
-> :deciduous_tree: A vue2 component to display tree chart
+> :deciduous_tree: A Vue component to display tree chart
 
 ![logo](https://refined-x.com/asset/vtc-logo.png)
 
 ## Install
 
 ```bash
-npm i vue-tree-chart --save
+npm i vue-tree-chart-3 --save
 ```
 
 ## Usage
 
-in template: 
+in template:
 
 ```html
 <TreeChart :json="treeData" />
@@ -112,7 +112,7 @@ npm run serve
 
 ## Build
 
-``` bash
+```bash
 npm run build-bundle
 ```
 
