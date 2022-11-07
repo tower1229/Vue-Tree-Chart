@@ -6,11 +6,7 @@
     >
       <div
         :class="{node: true, hasMate: treeData.mate}"
-        v-tooltip="{ 
-            content: treeData.tooltip_content, 
-            html: treeData.tooltip_html, 
-            placement: treeData.tooltip_placement
-          }"
+        v-tooltip="_getTooltipOptions(treeData)"
       >
         <div class="person " @click="$emit('click-node', treeData)">
           <div class="avat">
@@ -25,6 +21,7 @@
             </div>
           </template>
         </div>
+
         <div
           class="person"
           v-if="treeData.mate"

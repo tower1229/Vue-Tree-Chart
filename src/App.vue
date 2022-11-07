@@ -1,8 +1,5 @@
 <template>
-  <div
-    id="app"
-    class="main d-flex flex-column justify-content-around align-items-center"
-  >
+  <div id="app" class="main d-flex flex-column justify-content-around align-items-center">
     <label>
       Vertical
       <input type="checkbox" v-model="landscape" value="1" />
@@ -19,7 +16,7 @@
       class="main-footer bg-dark col-12 d-flex justify-content-center align-items-center"
     >
       <p class="text-white">
-        © 2020 Author Github
+        © 2022 Author Github
         <a
           href="https://github.com/mdiaz00147/Vue-Binary-Tree"
           target="_blank"
@@ -43,42 +40,51 @@ export default {
     return {
       landscape: [],
       data: {
-        name: "<h5>TEST</h5>",
+        name: "root",
         image_url: "https://static.refined-x.com/static/avatar.jpg",
         tooltip_placement: "top",
         tooltip_content: "title",
         children: [
           {
-            name: "<h5>TEST22</h5>",
+            name: "<h5>children-1</h5>",
             image_url: "https://static.refined-x.com/static/avatar.jpg",
-            tooltip_placement: "left",
-            tooltip_content: "title",
+            tooltip: {
+              placement: "top",
+              content: "title",
+            },
             name_html: true,
           },
           {
-            name: "children2",
+            name: "children-2",
             image_url: "https://static.refined-x.com/static/avatar.jpg",
+            tooltip: {
+              placement: "left",
+              content: "<em>Tooltip</em> <u>with</u> <b>HTML</b>",
+              html: true,
+            },
             mate: {
               name: "mate",
               image_url: "https://static.refined-x.com/static/avatar.jpg",
-              tooltip_placement: "top",
-              tooltip_content: "<em>Tooltip</em> <u>with</u> <b>HTML</b>",
-              tooltip_html: true,
+              tooltip: {
+                placement: "top",
+                content: "<em>Tooltip</em> <u>with</u> <b>HTML</b>",
+                html: true,
+              },
             },
             children: [
               {
-                name: "grandchild",
+                name: "grandchild-1",
                 image_url: "https://static.refined-x.com/static/avatar.jpg",
                 tooltip_placement: "bottom",
                 tooltip_content: "<em>Tooltip</em> <u>with</u> <b>HTML</b>",
                 tooltip_html: true,
               },
               {
-                name: "grandchild2",
+                name: "grandchild-2",
                 image_url: "https://static.refined-x.com/static/avatar.jpg",
               },
               {
-                name: "grandchild3",
+                name: "grandchild-3",
                 image_url: "https://static.refined-x.com/static/avatar.jpg",
               },
             ],
@@ -88,7 +94,7 @@ export default {
     };
   },
   methods: {
-    clickNode: function(node) {
+    clickNode: function (node) {
       // eslint-disable-next-line
       console.log(node);
     },
