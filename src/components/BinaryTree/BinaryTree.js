@@ -1,7 +1,9 @@
-import VTooltip from "v-tooltip";
+import FloatingVue from "floating-vue";
 import Vue from "vue";
 
-Vue.use(VTooltip);
+import 'floating-vue/dist/style.css';
+
+Vue.use(FloatingVue);
 
 export default {
   name: "BinaryTree",
