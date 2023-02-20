@@ -62,7 +62,8 @@ Component data to support those field：
 
 ### Example 1
 
-![](C:\Users\Spring-_-Bear\Desktop\样例1.png)
+![样例1](https://user-images.githubusercontent.com/104678885/220013648-1048a79d-ec18-4cde-87d6-367eaffb1931.png)
+
 
 ```js
   {
@@ -106,7 +107,8 @@ Component data to support those field：
 
 ### Example 2
 
-![](C:\Users\Spring-_-Bear\Desktop\红楼梦.png)
+![红楼梦](https://user-images.githubusercontent.com/104678885/220013679-1ca40c62-6123-4317-9e8b-3487d774c55b.png)
+
 
 ```json
 {
