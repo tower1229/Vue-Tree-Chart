@@ -58,7 +58,11 @@ export default {
 - extend[Boolean] 展开/收起节点后代，默认展开
 ```
 
-示例：
+## 示例
+
+### 样例 1
+
+![](C:\Users\Spring-_-Bear\Desktop\样例1.png)
 
 ```js
   {
@@ -98,6 +102,110 @@ export default {
       }
     ]
   }
+```
+
+### 样例 2
+
+![](C:\Users\Spring-_-Bear\Desktop\红楼梦.png)
+
+```json
+{
+    name: '贾太公',
+    children: [
+        {
+            name: '贾演',
+            children: [
+                {
+                    name: '贾代化',
+                    children: [
+                        {name: '贾敷'},
+                        {
+                            name: '贾敬',
+                            children: [
+                                {
+                                    name: '贾珍',
+                                    image_url: "https://img01.yzcdn.cn/vant/cat.jpeg",
+                                    children: [
+                                        {
+                                            name: '贾蓉',
+                                            mate: [
+                                                {name: '秦可卿'}
+                                            ]
+                                        }
+                                    ],
+                                    mate: [
+                                        {name: '尤氏'},
+                                    ],
+                                },
+                                {name: '贾惜春'},
+                            ]
+                        },
+                    ]
+                },
+            ]
+        },
+        {
+            name: '贾源',
+            children: [
+                {
+                    name: '贾代善',
+                    image_url: "https://img01.yzcdn.cn/vant/cat.jpeg",
+                    mate: [
+                        {name: '史太君'}
+                    ],
+                    children: [
+                        {
+                            name: '贾赦',
+                            children: [
+                                {
+                                    name: '贾琏',
+                                    image_url: "https://img01.yzcdn.cn/vant/cat.jpeg",
+                                    mate: [
+                                        {name: '王熙凤'},
+                                        {name: '尤二姐'}
+                                    ],
+                                    children: [
+                                        {name: '巧姐'},
+                                    ]
+                                },
+                                {name: '贾迎春'},
+                            ]
+                        },
+                        {
+                            name: '贾政',
+                            image_url: "https://img01.yzcdn.cn/vant/cat.jpeg",
+                            children: [
+                                {
+                                    name: '贾宝玉',
+                                    image_url: "https://img01.yzcdn.cn/vant/cat.jpeg",
+                                    mate: [
+                                        {name: '薛宝钗'}
+                                    ],
+                                },
+                                {name: '贾元春'},
+                                {name: '贾珠'},
+                                {name: '贾探春'},
+                                {name: '贾环'},
+                            ],
+                            mate: [
+                                {name: '王夫人',},
+                                {name: '赵姨娘',},
+                            ],
+                        },
+                        {
+                            name: '贾敏',
+                            image_url: "https://img01.yzcdn.cn/vant/cat.jpeg",
+                            children: [
+                                {name: '林黛玉'},
+                            ],
+                            mate: [{name: '林如海',}],
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
 ```
 
 ## 事件
