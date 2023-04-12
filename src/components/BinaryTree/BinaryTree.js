@@ -1,9 +1,11 @@
-import FloatingVue from "floating-vue";
-import Vue from "vue";
+import { VTooltip, Tooltip } from 'floating-vue';
+
+import Vue from 'vue';
 
 import 'floating-vue/dist/style.css';
 
-Vue.use(FloatingVue);
+Vue.directive('tooltip', VTooltip);
+Vue.component('VTooltip', Tooltip);
 
 export default {
   name: "BinaryTree",
@@ -35,14 +37,15 @@ export default {
   },
   methods: {
     _getTooltipOptions(node) {
+      let result = {};
+
       if (node.tooltip) {
-        const result = (node.tooltip);
-        return result;
-      } else {
-        return {};
+        result = node.tooltip;
       }
+
+      return result;
     },
-    toggleExtend: function (treeData) {
+    _toggleExtend: function (treeData) {
       treeData.extend = !treeData.extend;
       this.$forceUpdate();
     },

@@ -1,125 +1,19 @@
-.tooltip {
-  display: block !important;
-  z-index: 10000;
+.vue-binary-tree {
+  &-table {
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
 
-  .tooltip-inner {
-    background: black;
-    color: white;
-    border-radius: 16px;
-    padding: 5px 10px 4px;
-  }
-
-  .tooltip-arrow {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    position: absolute;
-    margin: 5px;
-    border-color: black;
-    z-index: 1;
-  }
-
-  &[x-placement^="top"] {
-    margin-bottom: 5px;
-
-    .tooltip-arrow {
-      border-width: 5px 5px 0 5px;
-      border-left-color: transparent !important;
-      border-right-color: transparent !important;
-      border-bottom-color: transparent !important;
-      bottom: -5px;
-      left: calc(50% - 5px);
-      margin-top: 0;
-      margin-bottom: 0;
+    td {
+      position: relative;
+      vertical-align: top;
+      padding: 0 0 50px 0;
+      text-align: center;
     }
-  }
-
-  &[x-placement^="bottom"] {
-    margin-top: 5px;
-
-    .tooltip-arrow {
-      border-width: 0 5px 5px 5px;
-      border-left-color: transparent !important;
-      border-right-color: transparent !important;
-      border-top-color: transparent !important;
-      top: -5px;
-      left: calc(50% - 5px);
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-  }
-
-  &[x-placement^="right"] {
-    margin-left: 5px;
-
-    .tooltip-arrow {
-      border-width: 5px 5px 5px 0;
-      border-left-color: transparent !important;
-      border-top-color: transparent !important;
-      border-bottom-color: transparent !important;
-      left: -5px;
-      top: calc(50% - 5px);
-      margin-left: 0;
-      margin-right: 0;
-    }
-  }
-
-  &[x-placement^="left"] {
-    margin-right: 5px;
-
-    .tooltip-arrow {
-      border-width: 5px 0 5px 5px;
-      border-top-color: transparent !important;
-      border-right-color: transparent !important;
-      border-bottom-color: transparent !important;
-      right: -5px;
-      top: calc(50% - 5px);
-      margin-left: 0;
-      margin-right: 0;
-    }
-  }
-
-  &.popover {
-    $color: #f9f9f9;
-
-    .popover-inner {
-      background: $color;
-      color: black;
-      padding: 24px;
-      border-radius: 5px;
-      box-shadow: 0 5px 30px rgba(black, 0.1);
-    }
-
-    .popover-arrow {
-      border-color: $color;
-    }
-  }
-
-  &[aria-hidden="true"] {
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.15s, visibility 0.15s;
-  }
-
-  &[aria-hidden="false"] {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.15s;
   }
 }
 
-table {
-  border-collapse: separate !important;
-  border-spacing: 0 !important;
-}
-td {
-  position: relative;
-  vertical-align: top;
-  padding: 0 0 50px 0;
-  text-align: center;
-}
 
-.extend_handle {
+.extend-handle {
   position: absolute;
   left: 50%;
   bottom: 30px;
@@ -129,7 +23,8 @@ td {
   transform: translate3d(-15px, 0, 0);
   cursor: pointer;
 }
-.extend_handle:before {
+
+.extend-handle:before {
   content: "";
   display: block;
   width: 100%;
@@ -141,10 +36,12 @@ td {
   transform-origin: 50% 50% 0;
   transition: transform ease 300ms;
 }
-.extend_handle:hover:before {
+
+.extend-handle:hover:before {
   border-color: #333 #333 transparent transparent;
 }
-.extend .extend_handle:before {
+
+.extend .extend-handle:before {
   transform: rotateZ(-45deg);
 }
 
@@ -157,7 +54,8 @@ td {
   border-left: 2px solid #ccc;
   transform: translate3d(-1px, 0, 0);
 }
-.childLevel::before {
+
+.child-level::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -166,7 +64,8 @@ td {
   border-left: 2px solid #ccc;
   transform: translate3d(-1px, 0, 0);
 }
-.childLevel::after {
+
+.child-level::after {
   content: "";
   position: absolute;
   left: 0;
@@ -174,11 +73,13 @@ td {
   top: -15px;
   border-top: 2px solid #ccc;
 }
-.childLevel:first-child:before,
-.childLevel:last-child:before {
+
+.child-level:first-child:before,
+.child-level:last-child:before {
   display: none;
 }
-.childLevel:first-child:after {
+
+.child-level:first-child:after {
   left: 50%;
   height: 15px;
   border: 2px solid;
@@ -186,7 +87,8 @@ td {
   border-radius: 6px 0 0 0;
   transform: translate3d(1px, 0, 0);
 }
-.childLevel:last-child:after {
+
+.child-level:last-child:after {
   right: 50%;
   height: 15px;
   border: 2px solid;
@@ -194,7 +96,8 @@ td {
   border-radius: 0 6px 0 0;
   transform: translate3d(-1px, 0, 0);
 }
-.childLevel:first-child.childLevel:last-child::after {
+
+.child-level:first-child.child-level:last-child::after {
   left: auto;
   border-radius: 0;
   border-color: transparent #ccc transparent transparent;
@@ -208,6 +111,7 @@ td {
   box-sizing: border-box;
   text-align: center;
 }
+
 .node .person {
   position: relative;
   display: inline-block;
@@ -215,6 +119,7 @@ td {
   width: 6em;
   overflow: hidden;
 }
+
 .node .person .avat {
   display: block;
   width: 4em;
@@ -225,17 +130,20 @@ td {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
+
 .node .person .avat img {
   width: 100%;
   height: 100%;
 }
+
 .node .person .name {
   height: 2em;
   line-height: 2em;
   overflow: hidden;
   width: 100%;
 }
-.node.hasMate::after {
+
+.node.has-mate::after {
   content: "";
   position: absolute;
   left: 2em;
@@ -244,7 +152,8 @@ td {
   border-top: 2px solid #ccc;
   z-index: 1;
 }
-.node.hasMate .person:last-child {
+
+.node.has-mate .person:last-child {
   margin-left: 1em;
 }
 
@@ -252,11 +161,13 @@ td {
   transform: translate(-100%, 0) rotate(-90deg);
   transform-origin: 100% 0;
 }
+
 .landscape .node {
   text-align: left;
   height: 8em;
   width: 8em;
 }
+
 .landscape .person {
   position: relative;
   transform: rotate(90deg);
@@ -265,25 +176,31 @@ td {
   top: 4em;
   left: -1em;
 }
+
 .landscape .person .avat {
   position: absolute;
   left: 0;
 }
+
 .landscape .person .name {
   height: 4em;
   line-height: 4em;
 }
-.landscape .hasMate {
+
+.landscape .has-mate {
   position: relative;
 }
-.landscape .hasMate .person {
+
+.landscape .has-mate .person {
   position: absolute;
 }
-.landscape .hasMate .person:first-child {
+
+.landscape .has-mate .person:first-child {
   left: auto;
   right: -4em;
 }
-.landscape .hasMate .person:last-child {
+
+.landscape .has-mate .person:last-child {
   left: -4em;
   margin-left: 0;
 }

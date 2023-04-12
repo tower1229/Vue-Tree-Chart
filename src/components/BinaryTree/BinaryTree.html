@@ -1,11 +1,11 @@
-<table v-if="treeData.name">
+<table v-if="treeData.name" class="vue-binary-tree-table">
   <tr>
     <td
       :colspan="treeData.children ? treeData.children.length * 2 : 1"
       :class="{parentLevel: treeData.children, extend: treeData.children && treeData.extend}"
     >
       <div
-        :class="{node: true, hasMate: treeData.mate}"
+        :class="{node: true, 'has-mate': treeData.mate}"
         v-tooltip="_getTooltipOptions(treeData)"
       >
         <div class="person " @click="$emit('click-node', treeData)">
@@ -41,18 +41,19 @@
         </div>
       </div>
       <div
-        class="extend_handle"
+        class="extend-handle"
         v-if="treeData.children"
-        @click="toggleExtend(treeData)"
+        @click="_toggleExtend(treeData)"
       ></div>
     </td>
   </tr>
+
   <tr v-if="treeData.children && treeData.extend">
     <td
       v-for="(children, index) in treeData.children"
       :key="index"
       colspan="2"
-      class="childLevel"
+      class="child-level"
     >
       <BinaryTree :json="children" @click-node="$emit('click-node', $event)" />
     </td>

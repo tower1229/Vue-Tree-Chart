@@ -16,7 +16,7 @@
       class="main-footer bg-dark col-12 d-flex justify-content-center align-items-center"
     >
       <p class="text-white">
-        © 2022 Author Github
+        © 2023 Author Github
         <a
           href="https://github.com/mdiaz00147/Vue-Binary-Tree"
           target="_blank"
