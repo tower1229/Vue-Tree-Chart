@@ -4,6 +4,7 @@
       Vertical
       <input type="checkbox" v-model="landscape" value="1" />
     </label>
+
     <div class="main-content d-flex align-items-center">
       <BinaryTree
         :json="data"
@@ -12,9 +13,7 @@
       />
     </div>
 
-    <footer
-      class="main-footer bg-dark col-12 d-flex justify-content-center align-items-center"
-    >
+    <footer class="main-footer bg-dark col-12 d-flex justify-content-center align-items-center">
       <p class="text-white">
         © 2023 Author Github
         <a
@@ -46,7 +45,7 @@ export default {
         tooltip_content: "title",
         children: [
           {
-            name: "<h5>children-1</h5>",
+            name: "<h5>children-one</h5>",
             image_url: "https://static.refined-x.com/static/avatar.jpg",
             tooltip: {
               placement: "top",
@@ -55,7 +54,7 @@ export default {
             name_html: true,
           },
           {
-            name: "children-2",
+            name: "children-two",
             image_url: "https://static.refined-x.com/static/avatar.jpg",
             tooltip: {
               placement: "left",
@@ -63,7 +62,7 @@ export default {
               html: true,
             },
             mate: {
-              name: "mate",
+              name: "brother",
               image_url: "https://static.refined-x.com/static/avatar.jpg",
               tooltip: {
                 placement: "top",
@@ -73,18 +72,18 @@ export default {
             },
             children: [
               {
-                name: "grandchild-1",
+                name: "grandchild-one",
                 image_url: "https://static.refined-x.com/static/avatar.jpg",
                 tooltip_placement: "bottom",
                 tooltip_content: "<em>Tooltip</em> <u>with</u> <b>HTML</b>",
                 tooltip_html: true,
               },
               {
-                name: "grandchild-2",
+                name: "grandchild-two",
                 image_url: "https://static.refined-x.com/static/avatar.jpg",
               },
               {
-                name: "grandchild-3",
+                name: "grandchild-three",
                 image_url: "https://static.refined-x.com/static/avatar.jpg",
               },
             ],

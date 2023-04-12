@@ -1,11 +1,6 @@
 import { VTooltip, Tooltip } from 'floating-vue';
 
-import Vue from 'vue';
-
 import 'floating-vue/dist/style.css';
-
-Vue.directive('tooltip', VTooltip);
-Vue.component('VTooltip', Tooltip);
 
 export default {
   name: "BinaryTree",
@@ -14,6 +9,12 @@ export default {
     return {
       treeData: {},
     };
+  },
+  directives: {
+    'tooltip': VTooltip
+  },
+  components: {
+    VTooltip: Tooltip
   },
   watch: {
     json: {
@@ -39,8 +40,15 @@ export default {
     _getTooltipOptions(node) {
       let result = {};
 
-      if (node.tooltip) {
-        result = node.tooltip;
+      if (node && Object.keys(node) && Object.keys(node).length > 0) {
+        for (let index = 0; index < Object.keys(node).length; index++) {
+          const element = Object.keys(node)[index];
+
+          if (element && element.includes('tooltip')){
+            const keyFormatted = element.replace(/^tooltip_/, "");
+            result[keyFormatted] = node[element];
+          }
+        }
       }
 
       return result;
