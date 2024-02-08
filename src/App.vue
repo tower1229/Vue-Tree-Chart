@@ -28,7 +28,7 @@ export default {
       landscape: [],
       data: {
         name: 'root',
-        image_url: "https://static.refined-x.com/static/avatar.jpg",
+        image_url: null,
         class: ["rootNode"],
         children: [
           {

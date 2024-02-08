@@ -10,7 +10,8 @@
               @click="$emit('click-node', treeData)"
             >
               <div class="avat">
-                <img :src="treeData.image_url" />
+                <img v-if="treeData.image_url" :src="treeData.image_url" />
+                <h1 v-else>{{ treeData.name[0].toUpperCase() }}</h1>
               </div>
               <div class="name">{{treeData.name}}</div>
             </div>
@@ -20,7 +21,8 @@
                 @click="$emit('click-node', mate)"
               >
                 <div class="avat">
-                  <img :src="mate.image_url" />
+                  <img v-if="mate.image_url" :src="mate.image_url" />
+                  <h1 v-else>{{ mate.name[0].toUpperCase() }}</h1>
                 </div>
                 <div class="name">{{mate.name}}</div>
               </div>
@@ -94,7 +96,7 @@ transform: rotateZ(135deg);transform-origin: 50% 50% 0;transition: transform eas
 
 .node{position: relative; display: inline-block;margin: 0 1em;box-sizing: border-box; text-align: center;}
 .node .person{position: relative; display: inline-block;z-index: 2;width:6em; overflow: hidden;}
-.node .person .avat{display: block;width:4em;height: 4em;margin:auto;overflow:hidden; background:#fff;border:1px solid #ccc;box-sizing: border-box;}
+.node .person .avat{display: flex;justify-content: center;align-items: center;width:4em;height: 4em;margin:auto;overflow:hidden; background:#fff;border:1px solid #ccc;box-sizing: border-box;}
 .node .person .avat img{width:100%;height: 100%;}
 .node .person .name{height:2em;line-height: 2em;overflow: hidden;width:100%;}
 .node.hasMate::after{content: "";position: absolute;left:2em;right:2em;top:2em;border-top:2px solid #ccc;z-index: 1;}
