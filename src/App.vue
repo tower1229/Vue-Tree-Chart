@@ -28,33 +28,38 @@ export default {
       landscape: [],
       data: {
         name: 'root',
-        image_url: "https://static.refined-x.com/static/avatar.jpg",
+        link_url: "#root",
+        image_url: null,
         class: ["rootNode"],
         children: [
           {
             name: 'children1',
+            link_url: "#children1",
             image_url: "https://static.refined-x.com/static/avatar.jpg"
           },
           {
             name: 'children2',
+            link_url: "#children2",
             image_url: "https://static.refined-x.com/static/avatar.jpg",
             mate: [
               {
                 name: 'mate',
-                image_url: "https://static.refined-x.com/static/avatar.jpg"
               }
             ],
             children: [
               {
                 name: 'grandchild',
+                link_url: "#grandchild",
                 image_url: "https://static.refined-x.com/static/avatar.jpg"
               },
               {
                 name: 'grandchild2',
+                link_url: "#grandchild2",
                 image_url: "https://static.refined-x.com/static/avatar.jpg"
               },
               {
                 name: 'grandchild3',
+                link_url: "#grandchild3",
                 image_url: "https://static.refined-x.com/static/avatar.jpg"
               }
             ]
