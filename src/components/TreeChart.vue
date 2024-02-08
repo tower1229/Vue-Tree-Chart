@@ -9,10 +9,10 @@
               :class="Array.isArray(treeData.class) ? treeData.class : []"
               @click="$emit('click-node', treeData)"
             >
-              <div class="avat">
+              <component :is="treeData.link_url ? 'a' : 'div'" :href="treeData.link_url" class="avat">
                 <img v-if="treeData.image_url" :src="treeData.image_url" />
                 <h1 v-else>{{ treeData.name[0].toUpperCase() }}</h1>
-              </div>
+              </component>
               <div class="name">{{treeData.name}}</div>
             </div>
             <template v-if="Array.isArray(treeData.mate) && treeData.mate.length">
@@ -20,10 +20,10 @@
                 :class="Array.isArray(mate.class) ? mate.class : []"
                 @click="$emit('click-node', mate)"
               >
-                <div class="avat">
+                <component :is="treeData.link_url ? 'a' : 'div'" :href="mate.link_url" class="avat">
                   <img v-if="mate.image_url" :src="mate.image_url" />
                   <h1 v-else>{{ mate.name[0].toUpperCase() }}</h1>
-                </div>
+                </component>
                 <div class="name">{{mate.name}}</div>
               </div>
             </template>

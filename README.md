@@ -51,6 +51,7 @@ Component data to support those field：
 
 ```text
 - name[String] to display a node name
+- link_url[String] to attach a node link
 - image_url[String] to display a node image
 - children[Array] node`s children
 - mate[Array] node`s mate
@@ -63,38 +64,41 @@ Example：
 ```js
   {
     name: 'root',
-    image_url: "https://static.refined-x.com/avat.jpg",
+    link_url: "#root",
+    image_url: null,
     class: ["rootNode"],
     children: [
       {
         name: 'children1',
-        image_url: "https://static.refined-x.com/avat1.jpg"
+        link_url: "#children1",
+        image_url: "https://static.refined-x.com/static/avatar.jpg"
       },
       {
         name: 'children2',
-        image_url: "https://static.refined-x.com/avat2.jpg",
-        mate: [{
-          name: 'mate',
-          image_url: "https://static.refined-x.com/avat3.jpg"
-        }],
+        link_url: "#children2",
+        image_url: "https://static.refined-x.com/static/avatar.jpg",
+        mate: [
+          {
+            name: 'mate',
+          }
+        ],
         children: [
           {
             name: 'grandchild',
-            image_url: "https://static.refined-x.com/avat.jpg"
+            link_url: "#grandchild",
+            image_url: "https://static.refined-x.com/static/avatar.jpg"
           },
           {
             name: 'grandchild2',
-            image_url: "https://static.refined-x.com/avat1.jpg"
+            link_url: "#grandchild2",
+            image_url: "https://static.refined-x.com/static/avatar.jpg"
           },
           {
             name: 'grandchild3',
-            image_url: "https://static.refined-x.com/avat2.jpg"
+            link_url: "#grandchild3",
+            image_url: "https://static.refined-x.com/static/avatar.jpg"
           }
         ]
-      },
-      {
-        name: 'children3',
-        image_url: "https://static.refined-x.com/avat.jpg"
       }
     ]
   }
